@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>حجز طيران</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>✈️ حجز تذاكر الطيران</h1>
+    <p>ابحث عن رحلتك القادمة</p>
+  </header>
+
+  <main>
+    <form id="bookingForm">
+      <div class="row">
+        <div class="field">
+          <label for="from">من</label>
+          <input type="text" id="from" placeholder="الجزائر" required>
+        </div>
+        <div class="field">
+          <label for="to">إلى</label>
+          <input type="text" id="to" placeholder="دبي" required>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <label for="depart">تاريخ المغادرة</label>
+          <input type="date" id="depart" required>
+        </div>
+        <div class="field">
+          <label for="return">تاريخ العودة</label>
+          <input type="date" id="return">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <label for="passengers">عدد المسافرين</label>
+          <input type="number" id="passengers" min="1" max="9" value="1" required>
+        </div>
+        <div class="field">
+          <label for="class">الدرجة</label>
+          <select id="class">
+            <option value="economy">اقتصادية</option>
+            <option value="business">رجال الأعمال</option>
+            <option value="first">أولى</option>
+          </select>
+        </div>
+      </div>
+
+      <button type="submit">🔍 ابحث عن رحلات</button>
+    </form>
+
+    <section id="results" class="results hidden">
+      <h2>الرحلات المتاحة</h2>
+      <div id="flightsList"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 موقع حجز الطيران - جميع الحقوق محفوظة</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
