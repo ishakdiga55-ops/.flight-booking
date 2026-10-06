@@ -64,6 +64,27 @@
     <p>© 2026 موقع حجز الطيران - جميع الحقوق محفوظة</p>
   </footer>
 
+  <!-- إعدادات Firebase -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+    import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+    // ⚠️ الكود الخاص بك الذي نسخته من Firebase
+    const firebaseConfig = {
+      apiKey: "AIzaSyCvXAxY5_t1VxyJuShCE_unoOoOShjJXjI",
+      authDomain: "flight-app-algeria.firebaseapp.com",
+      projectId: "flight-app-algeria",
+      storageBucket: "flight-app-algeria.firebasestorage.app",
+      messagingSenderId: "647003067504",
+      appId: "1:647003067504:web:17138024e8bf3e837250b5",
+      measurementId: "G-3TNVLY7N15"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    window.db = getFirestore(app);
+    window.collection = collection;
+    window.addDoc = addDoc;
+  </script>
   <script src="script.js"></script>
 </body>
 </html>
